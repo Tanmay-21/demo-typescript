@@ -1,0 +1,8 @@
+.modal-layout {
+    position: fixed;
+    left: 30%;
+    width: 40%;
+    top: 22vh;
+    background-color: white;
+    z-index: 999;
+}
