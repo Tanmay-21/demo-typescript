@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 import Backdrop from "./Backdrop";
+import CustomForm from "../forms/Form";
 
 import "./Modal.css";
 
@@ -27,7 +28,11 @@ class ModalLayout extends Component<ModalLayoutProps, ModalLayoutState> {
     ModalRoot?.removeChild(this.element);
   }
 
-  content = (<div className="modal-layout">Works!</div>);
+  content = (
+    <div className="modal-layout">
+      <CustomForm />
+    </div>
+  );
 
   render() {
     return ReactDOM.createPortal(this.content, this.element);

@@ -15,6 +15,11 @@ type MovieListState = {
 class MovieList extends Component<MovieListProps, MovieListState> {
   constructor(props: MovieListProps) {
     super(props);
+
+    this.onClick = this.onClick.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+
     this.state = { Movies: [], NewMovie: "", showModal: false };
   }
 
@@ -26,13 +31,13 @@ class MovieList extends Component<MovieListProps, MovieListState> {
   };
 
   openModal = () => {
-    this.setState({showModal: true});
-    console.log('opened!');
+    this.setState({ showModal: true });
+    console.log("opened!");
   };
 
   closeModal = () => {
-    this.setState({showModal: false});
-    console.log('closed!');
+    this.setState({ showModal: false });
+    console.log("closed!");
   };
 
   render() {
